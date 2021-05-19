@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>Benford's Law data test result</h1>
+    <img src={{url}} alt="Chart" height="auto" width="100%">
+    {% if differ %}
+        <p>The leading digits distribution is different from expected by Benford's Law</p>
+    {% else %}
+        <p>The leading digits distribution is not different from expected by Benford's Law</p>
+    {% endif %}
+</div>
+{% endblock %}

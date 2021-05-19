@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+ <h1 style="text-align: center">Benford's Law</h1>
+ <p style="text-align: center">In 1938, Frank Benford published a paper showing
+  the distribution of the leading digit in many disparate sources of data.
+  In all these sets of data, the number 1 was the leading digit about 30% of the time.
+  Benford’s law has been found to apply to population numbers, death rates, lengths of rivers,
+  mathematical distributions given by some power law, and physical constants like atomic weights
+  and specific heats.</p>
+ <h4 style="text-align: center">Upload a file to test it against Benford's Law</h4>
+ <form action="/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="tsv_file">
+  <input type="submit" value="Submit">
+ </form>
+</div>
+{% endblock %}

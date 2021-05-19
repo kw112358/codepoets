@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+ <h1>Benford's Law data test</h1>
+
+ <form action="/uploader" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file">
+  <input type="submit" value="Upload">
+ </form>
+</div>
+{% endblock %}
