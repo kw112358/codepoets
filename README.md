@@ -1,4 +1,4 @@
 # codepoets
-Database project
-Benford's Law web app
-Stacktrace analisys
+Database project;
+Benford's Law web app;
+Stacktrace analisys;
