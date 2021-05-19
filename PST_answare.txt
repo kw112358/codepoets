@@ -1,0 +1,44 @@
+Problem 1
+Funkcja calc() próbuje wykonać konkatenację stringów ponieważ pierwszym argumentem przekazanym do perform_calculation() wywołującej funkcję calc jest add a drugim argumentem jest string. Trzecim argumentem jest integer natomiast funkcja calc spodziewała się kolejnego stringu.
+Linia:  File "stack_traces.py", line 12, in add
+Wyjątek do obsłużenia.
+
+Problem 2
+Symetrycznie do problemu 1 wykonywana jest ta sama operacja, ale drugim argumentem jest integer, więc funkcja próbuje wykonać dodawanie liczb jednak dostaje string w trzecim argumencie co powoduje błąd.
+Linia:  File "stack_traces.py", line 12, in add
+Wyjątek do obsłużenia.
+
+Problem 3
+Tym razem operacją do wykonania jest mnożenie dwóch czynników. Jednak oba czynniki są stringami. O ile python poradziłby sobie z 3 * ‚3’ i ‚3’ * 3 i 3 * 3 tak nie możliwa do wykonania jest operacja mnożenia string * string.
+Linia: File "stack_traces.py", line 15, in mult
+Wyjątek do obsłużenia.
+
+Problem 4
+Ponownie operacją do wykonania jest mnożenie. Czynnikami są dwie listy. Python poradziłby sobie z 4 * [3] i 3 * [4] i 3 * 4 ale nie możliwa do wykonania jest operacja mnożenia lista * llista
+Linia: File "stack_traces.py", line 15, in mult
+Wyjątek do obsłużenia.
+
+Problem 5
+Operacją do wykonania jest „innoc”. Podnoszony jest wyjątek ValueError z wiadomością ‚Invalid’. Zakładam, że operacja nie może być wykonana na komplecie podanych argumentów i zwracany jest taki komunikat. Jednak wiadomość przekazywana przez wyjątek nie jest wystarczająco dokładna by to określić.
+Linia: File "stack_traces.py", line 21, in spelunk
+Komunikat do poprawienia.
+
+Problem 6
+Do wykonania jest operacja na dwóch iterowalnych obiektach. Pierwszy argument jest listą i spełnia założenie iterowalności drugi jest integerem i nie spełnia założenia iterowalności w związku z czym operacji nie da się wykonać. Zwracany jest błąd w związku z niemożnością wykonania operacji zip na liście i liczbie.
+Linia: File "stack_traces.py", line 30, in comp_calc
+Wyjątek do obsłużenia.
+
+Problem 7
+Do wykonania jest operacja jak w problemie 6. Tym razem jednym z argumentów jest lista a drugim lista z zagnieżdżoną listą. Można wykonać operację zip ale później nie można dodać liczby z jednej listy do listy z drugiej listy: [3] + 6
+Linia: File "stack_traces.py", line 12, in add
+Wyjątek do obsłużenia.
+
+Problem 8
+Do wykonania jest operacja dodawania na wskazanych przez podane w argumentach klucze wartościach. Nie można dodać integera 1 do stringu ‚2’.
+Linia: File "stack_traces.py", line 12, in add
+Wyjątek do obsłużenia.
+
+Problem 9
+Operacja jak w problemie 8. Tym razem problemem jest brak klucza ‚one’ w słowniku {}.
+Linia: File "stack_traces.py", line 26, in calc_dict
+Wyjątek do obsłużenia.
